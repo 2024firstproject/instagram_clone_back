@@ -2,8 +2,6 @@
 <h3 align="center">Study how to make Instagram By Django</h3>
 
 - 🌱 I’m currently learning **Django for Backend**
-
-<h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
 
