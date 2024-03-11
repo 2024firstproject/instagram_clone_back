@@ -1,20 +1,28 @@
+{% load static %}
 <!doctype html>
 <html lang="ko">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 <body>
-    <h1>Login</h1>
-    <div id="login">
+
+    <div id="login" style="padding: 20px; text-align: center; width: 100%">
+        <img style="margin-right: 20px;"
+                src="https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?__makehaste_cache_breaker=HOgRclNOosk">
         <form method="POST">
-        {% csrf_token %}
-        <div>
-            <label for="id_userId"></label>
-            <input type="text" name="userId" minlength="3" required id = "id_userId">
-        </div>
-        <div>
-            <label for="id_password"></label>
-            <input type="text" name="password" minlength="4" required id = "id_password">
-        </div>
-        <button type="submit">로그인</button>
-    </form>
+            <img style="width: 200px"
+                     src = "{% static 'img/images.png' %}">
+            {% csrf_token %}
+            <p>
+                <label for="id_id"></label>
+                <input type="text" name="username" placeholder="전화번호, 사용자 이름 또는 이메일" minlength="3" required id="id_id">
+            </p>
+            <p>
+                <label for="id_password"></label>
+                <input type="password" name="password" placeholder="비밀번호" minlength="4" required id="id_password">
+            </p>
+            <button type="submit" class="btn btn-login">로그인</button>
+        </form>
     </div>
 
 </body>
