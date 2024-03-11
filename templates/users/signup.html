@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+        <div id="signup" style="padding: 20px; text-align: center; width: 100%">
+            <form method="POST" enctype="multipart/form-data">
+                <div><img style="width: 200px"
+                     src = "{% static 'img/images.png' %}"></div>
+                <div style="font-weight: bold; color: gray; padding-bottom: 20px">친구들의 사진과 동영상을 보려면 가입하세요.</div>
+                {% csrf_token %}
+                <p>
+                    <label for="id_userId"></label>
+                    <input type="text" name="userId" placeholder="휴대폰 번호 또는 이메일 주소" required id="id_userId">
+                </p>
+                <p>
+                    <label for="id_name"></label>
+                    <input type="text" name="name" placeholder="성명" required id="id_name">
+                </p>
+                <p>
+                    <label for="id_nickname"></label>
+                    <input type="text" name="nickname" placeholder="사용자 이름" required id="id_nickname">
+                </p>
+                <p>
+                    <label for="id_password"></label>
+                    <input type="password" name="password" placeholder="비밀번호" required id="id_password">
+                </p>
+                <button type="submit" class="btn btn-signup">가입</button>
+           </form>
+        </div>
+</body>
+</html>
