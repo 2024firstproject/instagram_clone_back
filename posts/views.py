@@ -11,4 +11,4 @@ def feeds(request):
     # 모든 글 목록을 템플릿으로 전달
     posts = Post.objects.all()
     context = {"posts": posts}
-    return render(request, 'posts/feeds.html')
+    return render(request, 'posts/feeds.html', context)
